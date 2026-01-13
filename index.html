@@ -3,14 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Rust Skull Games</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Açılış ekranı */
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeOut 2s ease forwards;
+      animation-delay: 2s;
+      z-index: 10;
+    }
+
+    #splash img {
+      width: 180px;
+      image-rendering: pixelated;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* Ana site */
+    #main {
+      padding: 40px;
+    }
+  </style>
 </head>
 <body>
 
-<div id="loader">
-  <img src="assets/images/logo.png" alt="Rust Skull Games">
-</div>
+  <!-- Splash -->
+  <div id="splash">
+    <img src="logo.png" alt="Rust Skull Games">
+  </div>
 
-<script src="script.js"></script>
+  <!-- Ana içerik -->
+  <div id="main">
+    <h1>Rust Skull Games</h1>
+    <p>Bağımsız oyunlar, hikâyeler ve karanlık evrenler.</p>
+  </div>
+
 </body>
 </html>
