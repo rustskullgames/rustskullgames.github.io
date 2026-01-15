@@ -47,18 +47,24 @@ body {
     width: 100%;
     height: 90px;
     background: #000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+
+    padding-left: 0;       /* 🔥 LOGO TAM SOLA YAPIŞIR */
+    padding-right: 50px;  /* 🔥 MENÜ NEFES ALIR */
+
     border-bottom: 1px solid #1a1a1a;
 }
 
+/* LOGO */
 .nav-left img {
     height: 96px;
     object-fit: contain;
 }
 
+/* MENU */
 .nav-right {
     display: flex;
     gap: 40px;
@@ -70,7 +76,7 @@ body {
     font-weight: bold;
     font-style: italic;
     font-size: 18px;
-    color: #ff7a00;          /* TURUNCU */
+    color: #ff7a00;
     transition: color 0.2s ease;
 }
 
@@ -82,6 +88,6 @@ body {
 /* NAVBAR ALTI İNCE TURUNCU ŞERİT */
 .nav-accent {
     width: 100%;
-    height: 10px;            /* İNCE ŞERİT */
+    height: 10px;
     background: #ff7a00;
 }
