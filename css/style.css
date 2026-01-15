@@ -5,13 +5,14 @@
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     background: #000;
     color: #fff;
     font-family: sans-serif;
 }
 
-/* INTRO */
+/* ================= INTRO ================= */
 #intro {
     position: fixed;
     inset: 0;
@@ -22,8 +23,12 @@ body {
     align-items: center;
 
     z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#intro.show {
     opacity: 1;
-    transition: opacity 0.4s ease;
 }
 
 #intro.hidden {
@@ -36,7 +41,7 @@ body {
     max-width: 80vw;
 }
 
-/* SITE */
+/* ================= SITE ================= */
 #site {
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -46,7 +51,7 @@ body {
     opacity: 1;
 }
 
-/* NAVBAR SABİT */
+/* ================= NAVBAR ================= */
 .navbar-wrapper {
     position: fixed;
     top: 0;
@@ -55,7 +60,6 @@ body {
     z-index: 1000;
 }
 
-/* NAVBAR */
 .navbar {
     height: 96px;
     background: #000;
@@ -65,11 +69,13 @@ body {
     justify-content: space-between;
 
     padding-right: 50px;
+    transition: height 0.25s ease;
 }
 
 /* LOGO */
 .nav-left img {
-    height: 96px;
+    height: 99px;
+    transition: height 0.25s ease;
 }
 
 /* MENU */
@@ -101,6 +107,20 @@ body {
 .nav-accent {
     height: 8px;
     background: #ff7a00;
+    transition: height 0.25s ease;
+}
+
+/* SCROLL'DA KÜÇÜLME */
+.navbar.shrink {
+    height: 64px;
+}
+
+.navbar.shrink .nav-left img {
+    height: 48px;
+}
+
+.navbar.shrink + .nav-accent {
+    height: 5px;
 }
 
 /* CONTENT */
