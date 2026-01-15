@@ -1,0 +1,151 @@
+/* GENEL */
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: white;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: orange;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: gray;
+}
+
+.navbar a.active {
+  color: darkred;
+}
+
+/* ŞERİT */
+.nav-strip {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  height: 4px;
+  background: orange;
+}
+
+/* BAŞLIK */
+.contact-title {
+  margin-top: 140px;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: 42px;
+  color: red;
+  text-shadow: -2px -2px 0 darkred,
+               2px -2px 0 darkred,
+               -2px 2px 0 darkred,
+               2px 2px 0 darkred;
+}
+
+/* GMAIL BOX */
+.gmail-box {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 30px;
+  background: orange;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.gmail-box:hover {
+  background: black;
+  color: orange;
+}
+
+/* BİLGİ */
+.contact-info {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 30px auto;
+  max-width: 700px;
+  text-shadow: 1px 1px 0 black;
+}
+
+/* FORM */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background: black;
+  border: 2px solid black;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: orange;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: orange;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: darkorange;
+}
+
+/* FORM STATUS */
+#form-status {
+  margin-top: 15px;
+  font-weight: bold;
+  color: orange;
+}
+
+/* FOOTER */
+.support {
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.support h2 {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: yellow;
+  text-shadow: 2px 2px 0 black;
+}
+
+.social-links img {
+  width: 40px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
