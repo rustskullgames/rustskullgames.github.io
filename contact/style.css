@@ -1,35 +1,18 @@
-/* =====================
-   FONTLAR
-===================== */
+/* ================= FONTLAR ================= */
 
 @font-face {
   font-family: "Bukra";
   src: url("assets/fonts/29LTBukraSmBd.woff2") format("woff2");
-  font-weight: 700;
 }
 
 @font-face {
   font-family: "Crusoe";
   src: url("assets/fonts/CrusoeText-Regular.woff") format("woff");
-  font-weight: 400;
 }
-
-@font-face {
-  font-family: "Crusoe";
-  src: url("assets/fonts/CrusoeText-Italic.woff") format("woff");
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Crusoe";
-  src: url("assets/fonts/CrusoeText-Bold.woff") format("woff");
-  font-weight: 700;
-}
-
 @font-face {
   font-family: "Crusoe";
   src: url("assets/fonts/CrusoeText-Bold-Italic.woff") format("woff");
-  font-weight: 700;
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -37,16 +20,13 @@
   font-family: "Glacial";
   src: url("assets/fonts/GlacialIndifference-Regular.otf") format("opentype");
 }
-
 @font-face {
   font-family: "Glacial";
   src: url("assets/fonts/GlacialIndifference-Bold.otf") format("opentype");
-  font-weight: 700;
+  font-weight: bold;
 }
 
-/* =====================
-   GENEL
-===================== */
+/* ================= GENEL ================= */
 
 * {
   margin: 0;
@@ -57,117 +37,141 @@
 body {
   background: url("background.png") center/cover no-repeat fixed;
   color: white;
-  font-family: "Glacial";
 }
 
-/* =====================
-   BAŞLIK
-===================== */
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b0b0b;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-family: "Bukra";
+  font-size: 26px;
+  color: orange;
+}
+
+.navbar nav a {
+  margin-left: 25px;
+  font-family: "Bukra";
+  color: orange;
+  text-decoration: none;
+}
+
+.navbar nav a.active {
+  color: darkred;
+}
+
+.nav-line {
+  height: 4px;
+  background: orange;
+}
+
+/* ================= SKELETONS ================= */
+
+.skeleton {
+  position: fixed;
+  top: 120px;
+  width: 320px;
+  height: 70vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.skeleton.left {
+  left: 0;
+  background-image: url("skeleton-left.png");
+}
+
+.skeleton.right {
+  right: 0;
+  background-image: url("skeleton-right.png");
+}
+
+/* ================= CONTENT ================= */
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 80px 20px;
+}
 
 h1 {
-  text-align: center;
-  margin-top: 40px;
   font-family: "Bukra";
   font-size: 48px;
   color: red;
   -webkit-text-stroke: 2px darkred;
 }
 
-/* =====================
-   ARKAPLAN İSKELETLER
-===================== */
-
-.skeleton {
-  position: fixed;
-  top: 0;
-  width: 300px;
-  height: 100vh;
-  opacity: 0.25;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.left {
-  left: 0;
-  background-image: url("skeleton-left.png");
-}
-
-.right {
-  right: 0;
-  background-image: url("skeleton-right.png");
-}
-
-/* =====================
-   AÇIKLAMA
-===================== */
-
-.description {
+.info-text {
   width: 60%;
-  margin: 25px auto;
-  text-align: center;
-  font-size: 18px;
+  margin: 25px auto 50px;
+  font-family: "Glacial";
   font-style: italic;
 }
 
-/* =====================
-   FORM
-===================== */
+/* ================= FORM ================= */
 
-form {
-  width: 480px;
-  margin: 40px auto;
+.contact-form {
+  width: 420px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 15px;
   font-family: "Crusoe";
 }
 
-input,
-textarea {
-  padding: 12px;
+.contact-form input,
+.contact-form textarea {
   background: black;
   border: 2px solid #111;
   color: white;
+  padding: 12px;
 }
 
-input:focus,
-textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: orange;
   outline: none;
 }
 
-button {
+.contact-form button {
   background: orange;
+  color: black;
+  font-weight: bold;
   padding: 14px;
-  font-family: "Crusoe";
-  font-weight: 700;
   cursor: pointer;
   border: none;
 }
 
-button:hover {
+.contact-form button:hover {
   background: black;
   color: orange;
   border: 2px solid orange;
 }
 
-/* =====================
-   FOOTER
-===================== */
+/* ================= FOOTER ================= */
 
 footer {
-  margin-top: 80px;
+  margin-top: 120px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
 footer p {
+  font-family: "Glacial";
   font-weight: bold;
-  margin-bottom: 20px;
+  color: yellow;
 }
 
 .socials img {
-  width: 42px;
-  margin: 0 10px;
-  cursor: pointer;
+  width: 44px;
+  margin: 15px;
 }
