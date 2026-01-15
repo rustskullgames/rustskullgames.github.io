@@ -2,17 +2,14 @@ window.addEventListener("load", () => {
     const intro = document.getElementById("intro");
     const site = document.getElementById("site");
 
-    // intro gösterim süresi
+    // 0.9 saniye sonra intro kaybolur
     setTimeout(() => {
         intro.classList.add("hidden");
         site.classList.add("visible");
-    }, 900); // hızlı intro
+    }, 900);
 
-    // intro tamamen silinsin
+    // 1.3 saniye sonra DOM'dan silinir
     setTimeout(() => {
         intro.style.display = "none";
     }, 1300);
 });
-
-<script src="js/intro.js"></script>
-<script src="js/navbar.js"></script>
