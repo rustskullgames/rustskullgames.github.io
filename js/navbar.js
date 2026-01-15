@@ -5,13 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     links.forEach(link => {
         const href = link.getAttribute("href");
 
-        // Ana sayfa kontrolü
         if (path === "/" && href === "/") {
             link.classList.add("active");
         }
 
-        // Diğer sayfalar
-        if (path.startsWith(href) && href !== "/") {
+        if (href !== "/" && path.startsWith(href)) {
             link.classList.add("active");
         }
     });
