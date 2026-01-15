@@ -1,5 +1,7 @@
 setTimeout(() => {
-    document.getElementById("intro").remove();
+    const intro = document.getElementById("intro");
+    if (intro) intro.remove();
+
     document.getElementById("site").style.display = "block";
     document.body.style.overflow = "auto";
-}, 2200);
+}, 1400);
