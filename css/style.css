@@ -5,7 +5,7 @@
 }
 
 body {
-    background: black;
+    background: #000;
     overflow: hidden;
 }
 
@@ -13,7 +13,7 @@ body {
 #intro {
     position: fixed;
     inset: 0;
-    background: black;
+    background: #000; /* TAM SİMSİYAH */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@ body {
 #intro img {
     width: 140px;
     image-rendering: pixelated;
-    animation: logoFade 3s ease forwards;
+    animation: logoFade 1.8s ease forwards; /* HIZLANDIRILDI */
 }
 
 /* SITE */
@@ -35,13 +35,13 @@ body {
 @keyframes logoFade {
     0% {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(0.97);
     }
-    30% {
+    25% {
         opacity: 1;
         transform: scale(1);
     }
-    70% {
+    75% {
         opacity: 1;
     }
     100% {
