@@ -1,151 +1,173 @@
-/* GENEL */
-body {
-  margin: 0;
-  background: #0b0b0b;
-  color: white;
-  font-family: "Arial", sans-serif;
-  text-align: center;
+/* =====================
+   FONTLAR
+===================== */
+
+@font-face {
+  font-family: "Bukra";
+  src: url("assets/fonts/29LTBukraSmBd.woff2") format("woff2");
+  font-weight: 700;
 }
 
-/* NAVBAR */
-.navbar {
+@font-face {
+  font-family: "Crusoe";
+  src: url("assets/fonts/CrusoeText-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Crusoe";
+  src: url("assets/fonts/CrusoeText-Italic.woff") format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Crusoe";
+  src: url("assets/fonts/CrusoeText-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Crusoe";
+  src: url("assets/fonts/CrusoeText-Bold-Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Glacial";
+  src: url("assets/fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Glacial";
+  src: url("assets/fonts/GlacialIndifference-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+/* =====================
+   GENEL
+===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("background.png") center/cover no-repeat fixed;
+  color: white;
+  font-family: "Glacial";
+}
+
+/* =====================
+   BAŞLIK
+===================== */
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Bukra";
+  font-size: 48px;
+  color: red;
+  -webkit-text-stroke: 2px darkred;
+}
+
+/* =====================
+   ARKAPLAN İSKELETLER
+===================== */
+
+.skeleton {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: black;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  z-index: 1000;
+  width: 300px;
+  height: 100vh;
+  opacity: 0.25;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
-.navbar a {
-  color: orange;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
+.left {
+  left: 0;
+  background-image: url("skeleton-left.png");
 }
 
-.navbar a:hover {
-  color: gray;
+.right {
+  right: 0;
+  background-image: url("skeleton-right.png");
 }
 
-.navbar a.active {
-  color: darkred;
-}
+/* =====================
+   AÇIKLAMA
+===================== */
 
-/* ŞERİT */
-.nav-strip {
-  position: fixed;
-  top: 70px;
-  width: 100%;
-  height: 4px;
-  background: orange;
-}
-
-/* BAŞLIK */
-.contact-title {
-  margin-top: 140px;
-  font-family: "Arial Black", Impact, sans-serif;
-  font-size: 42px;
-  color: red;
-  text-shadow: -2px -2px 0 darkred,
-               2px -2px 0 darkred,
-               -2px 2px 0 darkred,
-               2px 2px 0 darkred;
-}
-
-/* GMAIL BOX */
-.gmail-box {
-  display: inline-block;
-  margin: 20px;
-  padding: 12px 30px;
-  background: orange;
-  color: black;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.gmail-box:hover {
-  background: black;
-  color: orange;
-}
-
-/* BİLGİ */
-.contact-info {
-  font-family: Arial, sans-serif;
-  font-style: italic;
-  font-weight: bold;
+.description {
+  width: 60%;
+  margin: 25px auto;
+  text-align: center;
   font-size: 18px;
-  margin: 30px auto;
-  max-width: 700px;
-  text-shadow: 1px 1px 0 black;
+  font-style: italic;
 }
 
-/* FORM */
-.contact-form {
-  max-width: 500px;
-  margin: auto;
+/* =====================
+   FORM
+===================== */
+
+form {
+  width: 480px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: "Crusoe";
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin: 10px 0;
+input,
+textarea {
   padding: 12px;
   background: black;
-  border: 2px solid black;
+  border: 2px solid #111;
   color: white;
-  font-style: italic;
-  font-weight: bold;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+input:focus,
+textarea:focus {
   border-color: orange;
   outline: none;
 }
 
-.contact-form button {
-  width: 100%;
-  padding: 12px;
+button {
   background: orange;
-  border: none;
-  font-weight: bold;
+  padding: 14px;
+  font-family: "Crusoe";
+  font-weight: 700;
   cursor: pointer;
+  border: none;
 }
 
-.contact-form button:hover {
-  background: darkorange;
-}
-
-/* FORM STATUS */
-#form-status {
-  margin-top: 15px;
-  font-weight: bold;
+button:hover {
+  background: black;
   color: orange;
+  border: 2px solid orange;
 }
 
-/* FOOTER */
-.support {
+/* =====================
+   FOOTER
+===================== */
+
+footer {
   margin-top: 80px;
-  padding-bottom: 40px;
+  text-align: center;
 }
 
-.support h2 {
-  font-family: Arial, sans-serif;
-  font-style: italic;
+footer p {
   font-weight: bold;
-  color: yellow;
-  text-shadow: 2px 2px 0 black;
+  margin-bottom: 20px;
 }
 
-.social-links img {
-  width: 40px;
-  margin: 10px;
-  transition: 0.3s;
-}
-
-.social-links img:hover {
-  transform: scale(1.1);
+.socials img {
+  width: 42px;
+  margin: 0 10px;
+  cursor: pointer;
 }
