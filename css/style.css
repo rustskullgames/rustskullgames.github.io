@@ -13,7 +13,7 @@ body {
 #intro {
     position: fixed;
     inset: 0;
-    background: #000; /* TAM SİMSİYAH */
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,9 +21,9 @@ body {
 }
 
 #intro img {
-    width: 140px;
+    width: 190px;              /* DAHA BÜYÜK LOGO */
     image-rendering: pixelated;
-    animation: logoFade 1.8s ease forwards; /* HIZLANDIRILDI */
+    animation: logoFade 2.2s forwards;
 }
 
 /* SITE */
@@ -35,16 +35,17 @@ body {
 @keyframes logoFade {
     0% {
         opacity: 0;
-        transform: scale(0.97);
+        transform: scale(0.92);
     }
-    25% {
+    18% {                       /* HIZLI GİRİŞ */
         opacity: 1;
         transform: scale(1);
     }
-    75% {
+    70% {
         opacity: 1;
     }
-    100% {
+    100% {                      /* YAVAŞ ÇIKIŞ */
         opacity: 0;
+        transform: scale(1.03);
     }
 }
