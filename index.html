@@ -1,46 +1,33 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rust Skull Games</title>
+    <meta charset="UTF-8">
+    <title>RustSkull Games</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      overflow: hidden;
-    }
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    /* INTRO */
-    #intro {
-      position: fixed;
-      inset: 0;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: introFade 4s ease forwards;
-    }
-
-    #intro img {
-      width: 200px;
-      image-rendering: pixelated;
-    }
-
-    @keyframes introFade {
-      0%   { opacity: 0; }
-      20%  { opacity: 1; }
-      80%  { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-  </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <div id="intro">
-    <img src="logo.png" alt="Rust Skull Games">
-  </div>
+    <!-- INTRO SCREEN -->
+    <div id="intro">
+        <img src="assets/logo.png" alt="RustSkull Logo" class="intro-logo">
 
+        <h1 class="intro-title">RUSTSKULL GAMES</h1>
+        <p class="intro-text">Independent • Dark • Unforgiving</p>
+    </div>
+
+    <!-- MAIN SITE (başta gizli) -->
+    <div id="site">
+        <h2 style="color:white; text-align:center; margin-top:50px;">
+            Main site buradan başlayacak
+        </h2>
+    </div>
+
+    <!-- JS -->
+    <script src="js/intro.js"></script>
 </body>
 </html>
