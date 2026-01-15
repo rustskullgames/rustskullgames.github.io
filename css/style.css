@@ -21,7 +21,7 @@ body {
 }
 
 #intro img {
-    width: 32vw;          /* EKRANA GÖRE BÜYÜR */
+    width: 40vw;          /* EKRANA GÖRE BÜYÜR */
     max-width: 360px;     /* TAŞMASIN */
     min-width: 220px;     /* KÜÇÜK EKRANDA DA OK */
     image-rendering: pixelated;
