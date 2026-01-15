@@ -65,7 +65,10 @@ body {
 }
 
 .nav-left img {
-    height: 55px;
+    height: 68px;       /* DAHA DOLU */
+    object-fit: contain;
+}
+
 }
 
 /* LINKS */
@@ -80,7 +83,7 @@ body {
     font-weight: bold;
     font-style: italic;
     font-size: 18px;
-    color: #fff;
+    color: #ff7a00;
     transition: color 0.2s ease;
 }
 
