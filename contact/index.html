@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact – Rust Skull Games</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Rust Skull Games</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-  <div class="logo">RUST SKULL GAMES</div>
-  <nav>
-    <a href="../">HOME</a>
-    <a href="../games/">GAMES</a>
-    <a href="../news/">NEWS</a>
-    <a href="../social-media/">SOCIAL MEDIA</a>
-    <a class="active" href="#">CONTACT</a>
-  </nav>
-</header>
-<div class="nav-line"></div>
+<div id="intro">
+    <img src="assets/logo.png" alt="Rust Skull Games">
+</div>
 
+<div id="site">
+
+<header class="navbar-wrapper">
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/">
+                <img src="assets/logobanner.png">
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <a class="nav-link" href="/games">GAMES</a>
+            <a class="nav-link" href="/news">NEWS</a>
+            <a class="nav-link" href="/social-media">SOCIAL MEDIA</a>
+            <a class="nav-link" href="/contact">CONTACT</a>
+        </div>
+    </nav>
+    <div class="nav-accent"></div>
+</header>
+
+<main class="content"></main>
+
+</div>
+
+<script src="js/intro.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/scroll-navbar.js"></script>
+
+</div>  
 <!-- ================= BACKGROUND & SKELETONS ================= -->
 <div class="skeleton left"></div>
 <div class="skeleton right"></div>
