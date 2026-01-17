@@ -1,95 +1,48 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Rust Skull Games</title>
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="UTF-8">
+  <title>Contact – Rust Skull Games</title>
 
+  <link rel="icon" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
 <body>
 
-<div id="intro">
-    <img src="assets/logo.png" alt="Rust Skull Games">
-</div>
-
-<div id="site">
-
-<header class="navbar-wrapper">
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="/">
-                <img src="assets/logobanner.png">
-            </a>
-        </div>
-
-        <div class="nav-right">
-            <a class="nav-link" href="/games">GAMES</a>
-            <a class="nav-link" href="/news">NEWS</a>
-            <a class="nav-link" href="/social-media">SOCIAL MEDIA</a>
-            <a class="nav-link" href="/contact">CONTACT</a>
-        </div>
-    </nav>
-    <div class="nav-accent"></div>
+<header class="navbar">
+  <img src="./assets/logobanner.png" class="banner">
+  <nav>
+    <a href="../">HOME</a>
+    <a href="../games/">GAMES</a>
+    <a href="../news/">NEWS</a>
+    <a href="../social-media/">SOCIAL MEDIA</a>
+    <a class="active" href="#">CONTACT</a>
+  </nav>
 </header>
 
-<main class="content"></main>
+<h1>YOU CAN CONTACT US NOW!</h1>
 
-</div>
+<p class="desc">
+The main goal of the communication section at Rust Skull Games is simple.
+Your feedback, ideas and issues are extremely important to us.
+</p>
 
-<script src="js/intro.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/scroll-navbar.js"></script>
+<form class="contact-form">
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Gmail Address">
+  <input type="text" placeholder="Support Type">
+  <textarea placeholder="Message"></textarea>
+  <button>SEND MESSAGE</button>
+</form>
 
-</div>  
-<!-- ================= BACKGROUND & SKELETONS ================= -->
-<div class="skeleton left"></div>
-<div class="skeleton right"></div>
-
-<!-- ================= CONTENT ================= -->
-<main class="contact-container">
-
-  <h1>YOU CAN CONTACT US NOW!</h1>
-
-  <p class="info-text">
-    The main goal of the communication section at Rust Skull Games is simple.
-    Your feedback, ideas and issues are extremely important to us.
-  </p>
-
-  <!-- ================= FORM ================= -->
-  <form 
-    action="https://formspree.io/f/mojjvygv"
-    method="POST"
-    class="contact-form"
-  >
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Gmail Address" required>
-    <input type="text" name="subject" placeholder="Support Type" required>
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button type="submit">SEND MESSAGE</button>
-  </form>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
 <footer>
   <p>Support Us On:</p>
-  <div class="socials">
-    <a href="https://www.instagram.com/rustskull_games/" target="_blank">
-      <img src="instagram.png">
-    </a>
-    <a href="https://www.youtube.com/channel/UC1-SHB4W49ID3ZckdYIBHHw" target="_blank">
-      <img src="youtube.png">
-    </a>
-    <a href="https://rust-skull-games.itch.io/" target="_blank">
-      <img src="itchio.png">
-    </a>
-    <a href="https://x.com/RustSkullGames" target="_blank">
-      <img src="twitter.png">
-    </a>
-    <a href="https://www.tiktok.com/@rustskullgames" target="_blank">
-      <img src="tiktok.png">
-    </a>
+  <div class="icons">
+    <img src="./instagram.png">
+    <img src="./youtube.png">
+    <img src="./itchio.png">
+    <img src="./twitter.png">
+    <img src="./tiktok.png">
   </div>
 </footer>
 
