@@ -1,130 +1,196 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ================= FONTLAR ================= */
+
+@font-face {
+  font-family: Bukra;
+  src: url("assets/fonts/29LTBukraSmBd.woff2");
 }
 
-/* BODY */
+@font-face {
+  font-family: Crusoe;
+  src: url("assets/fonts/CrusoeText-Regular.woff");
+}
+
+@font-face {
+  font-family: Glacial;
+  src: url("assets/fonts/GlacialIndifference-Regular.otf");
+}
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background: #000;
-    color: #fff;
-    font-family: sans-serif;
+  background: url("assets/background.png") center/cover no-repeat fixed;
+  color: white;
+  overflow-x: hidden;
 }
 
 /* ================= INTRO ================= */
-#intro {
-    position: fixed;
-    inset: 0;
-    background: #000;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
 }
 
-#intro.show {
-    opacity: 1;
+.intro-screen img {
+  width: 420px;
 }
 
-#intro.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-#intro img {
-    width: 360px;
-    max-width: 80vw;
-}
-
-/* ================= SITE ================= */
-#site {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-#site.visible {
-    opacity: 1;
+body:not(.intro) .intro-screen {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ================= NAVBAR ================= */
-.navbar-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
 
 .navbar {
-    height: 96px;
-    background: #000;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding-right: 50px;
-    transition: height 0.25s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b0b0b;
+  padding: 15px 40px;
 }
 
-/* LOGO */
-.nav-left img {
-    height: 99px;
-    transition: height 0.25s ease;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Bukra;
+  color: orange;
 }
 
-/* MENU */
-.nav-right {
-    display: flex;
-    gap: 42px;
+.logo {
+  width: 48px;
 }
 
-.nav-link {
-    text-decoration: none;
-    font-family: '29LT Bukra Semi Wide', sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 19px;
-
-    color: #ff7a00;
-    transition: color 0.2s ease;
+.navbar nav a {
+  margin-left: 25px;
+  font-family: Bukra;
+  text-decoration: none;
+  color: orange;
 }
 
-.nav-link:hover {
-    color: #9a9a9a;
+.navbar nav a.active {
+  color: red;
 }
 
-.nav-link.active {
-    color: #b30000;
+.nav-line {
+  height: 4px;
+  background: orange;
 }
 
-/* ALT ŞERİT */
-.nav-accent {
-    height: 8px;
-    background: #ff7a00;
-    transition: height 0.25s ease;
+/* ================= SKELETONS ================= */
+
+.skeleton {
+  position: fixed;
+  top: 140px;
+  width: 320px;
+  height: 70vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  z-index: 0;
 }
 
-/* SCROLL'DA KÜÇÜLME */
-.navbar.shrink {
-    height: 64px;
+.skeleton.left {
+  left: 0;
+  background-image: url("assets/left-skeleton.png");
 }
 
-.navbar.shrink .nav-left img {
-    height: 67px;
+.skeleton.right {
+  right: 0;
+  background-image: url("assets/right-skeleton.png");
 }
 
-.navbar.shrink + .nav-accent {
-    height: 5px;
+/* ================= CONTENT ================= */
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 90px 20px;
 }
 
-/* CONTENT */
-.content {
-    margin-top: 140px;
-    min-height: 200vh;
+h1 {
+  font-family: Bukra;
+  font-size: 48px;
+  color: red;
+  -webkit-text-stroke: 2px darkred;
+}
+
+.info-text {
+  max-width: 600px;
+  margin: 25px auto 45px;
+  font-family: Glacial;
+  font-style: italic;
+}
+
+/* ================= FORM ================= */
+
+.contact-form {
+  width: 420px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Crusoe;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: black;
+  border: 2px solid #111;
+  color: white;
+  padding: 12px;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: orange;
+  outline: none;
+}
+
+.contact-form button {
+  background: orange;
+  color: black;
+  font-weight: bold;
+  padding: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-form button:hover {
+  background: black;
+  color: orange;
+  border: 2px solid orange;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  margin-top: 120px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+footer p {
+  font-family: Glacial;
+  font-weight: bold;
+  color: yellow;
+}
+
+.socials img {
+  width: 44px;
+  margin: 15px;
 }
