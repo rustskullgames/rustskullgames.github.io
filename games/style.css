@@ -1,0 +1,130 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+/* ================= INTRO ================= */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#intro.show {
+    opacity: 1;
+}
+
+#intro.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#intro img {
+    width: 360px;
+    max-width: 80vw;
+}
+
+/* ================= SITE ================= */
+#site {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#site.visible {
+    opacity: 1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    height: 96px;
+    background: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-right: 50px;
+    transition: height 0.25s ease;
+}
+
+/* LOGO */
+.nav-left img {
+    height: 101px;
+    transition: height 0.25s ease;
+}
+
+/* MENU */
+.nav-right {
+    display: flex;
+    gap: 42px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: '29LT Bukra Semi Wide', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 19px;
+
+    color: #ff7a00;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #9a9a9a;
+}
+
+.nav-link.active {
+    color: #b30000;
+}
+
+/* ALT ŞERİT */
+.nav-accent {
+    height: 8px;
+    background: #ff7a00;
+    transition: height 0.25s ease;
+}
+
+/* SCROLL'DA KÜÇÜLME */
+.navbar.shrink {
+    height: 64px;
+}
+
+.navbar.shrink .nav-left img {
+    height: 70px;
+}
+
+.navbar.shrink + .nav-accent {
+    height: 5px;
+}
+
+/* CONTENT */
+.content {
+    margin-top: 140px;
+    min-height: 200vh;
+}
