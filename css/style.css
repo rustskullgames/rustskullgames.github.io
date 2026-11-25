@@ -91,23 +91,26 @@ body {
     font-weight: bold;
     font-style: italic;
     font-size: 19px;
-
-    color: #ff7a00;
-    transition: color 0.2s ease;
+    color: #67ff00;
+    transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: #9a9a9a;
+    color: #0d4401;
+    transition : 0.3s;
+    scale : 0.90;
+    transition : 0.3s;
 }
 
 .nav-link.active {
-    color: #b30000;
+    color: #013c02;
+    scale: 0.92;
 }
 
 /* ALT ŞERİT */
 .nav-accent {
     height: 8px;
-    background: #ff7a00;
+    background: #6eff00;
     transition: height 0.25s ease;
 }
 
